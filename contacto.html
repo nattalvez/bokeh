@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Contacta con nosotros para aumentar tus ventas, mejorar tu imagen corporativa o fotografiar tus eventos.">
+	<meta name="keywords" content="fotografía digital, fotografía para eventos, fotobook, books profesionales, fotos de producto, fotos para bodas, fotos para casamientos, fotos para quinceañeras, marketing para empresas, marketing para emprendedores, publicidad en redes sociales, posicionamiento en google">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Nathaly Alvez">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="estilo/estilo.css">
+	<link rel="stylesheet" href="estilo/estiloSass.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contacto | BOKEH</title>
+</head>
+
+<body>
+	<header class="header">
+		<a href="index.html"><img src="images/Bokeh2.png" width="350" alt="logo bokeh" class="header__logoHeader"></a>
+		<nav class="navBar">
+			<ul class="navBar__lista">
+				<li class="navBar__item"><a class="navBar__link" href="index.html">home</a></li>
+				<li class="navBar__item"><a class="navBar__link" href="sobreMi.html">sobre mí</a></li>
+				<li class="navBar__item"><a class="navBar__link" href="fotografia.html">fotografía</a>
+				</li>
+				<li class="navBar__item"><a class="navBar__link" href="marketing.html">márketing</a>
+				</li>
+				<li class="navBar__item"><a class="navBar__link navBar__link--selected" href="contacto.html">contacto</a></li>
+			</ul>
+		</nav>
+	</header>
+
+
+	<main class="contactSection">
+		<iframe class="borderRadius8"
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26176.92211681506!2d-56.204022571357854!3d-34.90355680392452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f81b7db8c0371%3A0xe22fe40f04c80b07!2sPalermo%2C%2011200%20Montevideo%2C%20Montevideo%20Department!5e0!3m2!1sen!2suy!4v1622754027545!5m2!1sen!2suy"
+			width="400" height="300" allowfullscreen="" loading="lazy"></iframe>
+
+		<div class="form-group">
+			<aside class="widthForm">
+				<form action="" method="POST">
+					<fieldset class="borderRadius8">
+						<input class="contactInputs form-control form-control-sm" type="text" id="nombre" name="name"
+							onblur="blurplaceholder('nombre','Escriba su nombre aquí')"
+							onfocus="focusplaceholder('nombre')" value="" placeholder="Escriba su nombre aquí"><br>
+						<input class="contactInputs form-control form-control-sm" type="email" id="email" name="email"
+							onblur="blurplaceholder('email','Escriba su e-mail aquí')"
+							onfocus="focusplaceholder('email')" value="" placeholder="Escriba su e-mail aquí"><br>
+						<span id="fontresize95">Seleccione el tipo de empresa:</span><br>
+						<div class="form-check">
+							<input class="cursor form-check-input" type="radio" name="tipoempresa"
+								id="unipersonal"><label class="cursor form-check-label"
+								for="unipersonal">Unipersonal</label><br>
+							<input class="cursor form-check-input" type="radio" name="tipoempresa" id="Pyme"><label
+								class="cursor form-check-label" for="Pyme">Pyme</label><br>
+							<input class="cursor form-check-input" type="radio" name="tipoempresa"
+								id="+50empleados"><label class="cursor form-check-label" for="+50empleados">+50
+								empleados</label>
+						</div>
+
+						<input class="contactInputs form-control form-control-sm" type="text" id="empresa"
+							name="empresa" onblur="blurplaceholder('empresa','Escriba el nombre de la empresa aquí')"
+							onfocus="focusplaceholder('empresa')" value=""
+							placeholder="Escriba el nombre de la empresa"><br><br>
+						<select class="botones borderRadius5 cursor" name="tipoconsulta1" id="tipoconsulta1">
+							<option value="" disabled selected>Tipo de consulta</option>
+							<option value="Fotografía">Fotografía</option>
+							<option value="Márketing">Márketing</option>
+							<option value="Otros">Otros</option>
+						</select>
+
+						<textarea class="borderRadius5 form-control form-control-sm textareaClass" id="comment"
+							onblur="blurplaceholder('comment','Escriba su consulta aquí')"
+							onfocus="focusplaceholder('comment')" placeholder="Escriba su consulta aquí"></textarea>
+
+						<div class="form-check">
+							<input class="cursor form-check-input" type="checkbox" id="newsletter" name="newsletter"
+								checked><label id="fontresize" class="cursor form-check-label" for="newsletter">Deseo
+								recibir novedades</label>
+						</div>
+
+						<input class="cursor botones borderRadius5 clickEffect" type="reset"
+							value="Resetear formulario">
+						<input class="cursor botones borderRadius5 clickEffect" type="button" value="Enviar" data-bs-toggle="modal" data-bs-target="#enviarModal">
+					</fieldset>
+				</form>
+			</aside>
+		</div>
+	</main>
+
+	<!-- Modal -->
+	<div class="modal fade" id="enviarModal" tabindex="-1" aria-labelledby="enviarModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="enviarModalLabel">¡Gracias por tu mensaje!</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					Pronto nos pondremos en contacto contigo.
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="cursor botones borderRadius5 clickEffect" data-bs-dismiss="modal">Cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Fin Modal-->
+
+	<footer class="footer">
+		<div class= "footer__item">
+			&copy; Natt Alvez 2021 <br>
+			<img class="footer__flag" src="images/flag.png" alt="bandera de uruguay"> Montevideo, Uruguay
+		</div>
+
+		<div class= "footer__item"> +598 99 881 243 <br>
+			<a class="footer__link" href="mailto:alvez.nathaly@gmail.com">alvez.nathaly@gmail.com</a>
+		</div>
+
+		<fieldset class="footer__item--fieldset footer__item">
+			<legend class="footer__legend">SUSCRIBIRME AL MAILING:</legend>
+			<input type="text" class="footer__mailing" id="mailing" placeholder="Escriba su e-mail aquí">
+		</fieldset>
+
+		<div class="footer__social">
+			<a class="footer__socialLink" href="https://www.instagram.com/nattalvezph/"><img src="images/logoIg.png" class="footer__socialIcon"
+					alt="logo de instagram"></a>
+			<a class="footer__socialLink" href="https://bit.ly/3bPiL58"><img src="images/wppWhite.png" class="footer__socialIcon"
+					alt="logo de whatsapp"></a>
+		</div>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+	<script src="javaScript/javaScript.js"></script>
+</body>
+
+</html>
