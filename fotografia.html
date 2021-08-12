@@ -9,6 +9,7 @@
 	<meta name="keywords" content="fotografía digital, fotografía para eventos, fotobook, books profesionales, fotos de producto, fotos para bodas, fotos para casamientos, fotos para quinceañeras, marketing para empresas, marketing para emprendedores, publicidad en redes sociales, posicionamiento en google">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Nathaly Alvez">
+	<link rel="icon" type="image/png" href="images/favicon.png" />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="stylesheet" href="estilo/estilo.css">
@@ -22,7 +23,33 @@
 </head>
 
 <body>
-	<header class="header">
+		<nav class="navbar navbar-light bg-light smallScreenMenu">
+		<div class="container-fluid">
+			<a href="index.html"><img src="images/Bokeh2.png" alt="logo bokeh" class="header__logoHeader"></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+				</button>
+		</div>
+	</nav>
+	<div class="collapse smallScreenMenu" id="navbarToggleExternalContent">
+		<div class="bg-light">
+				<header class="header">
+				<nav class="navBar">
+					<ul class="navBar__lista">
+						<li class="navBar__item"><a class="navBar__link" href="index.html">home</a></li>
+						<li class="navBar__item"><a class="navBar__link" href="sobreMi.html">sobre mí</a></li>
+						<li class="navBar__item"><a class="navBar__link navBar__link--selected" href="fotografia.html">fotografía</a>
+						</li>
+						<li class="navBar__item"><a class="navBar__link" href="marketing.html">márketing</a>
+						</li>
+						<li class="navBar__item"><a class="navBar__link" href="contacto.html">contacto</a></li>
+					</ul>
+				</nav>
+			</header>
+		</div>
+	</div>
+
+	<header class="header bigScreensMenu">
 		<a href="index.html"><img src="images/Bokeh2.png" alt="logo bokeh" class="header__logoHeader"></a>
 		<nav class="navBar">
 			<ul class="navBar__lista">
@@ -40,18 +67,189 @@
 
 	<main class="fotoGrid">
 		<div class="fotoGrid__layout fotoGrid__layout--books"><img class="fotoGrid__imagen" src="images/books2.png"
-				alt="mujer joven con cara hacia arriba y ojos cerrados"></div>
-		<div class="fotoGrid__layout fotoGrid__layout--sociales"><img class="fotoGrid__imagen" src="images/sociales2_.png" alt="quinceañera posando">
+				alt="mujer joven con cara hacia arriba y ojos cerrados" data-bs-toggle="modal" data-bs-target="#booksModal"></div>
+		<div class="fotoGrid__layout fotoGrid__layout--sociales"><img class="fotoGrid__imagen" src="images/sociales2_.png" alt="quinceañera posando" data-bs-toggle="modal" data-bs-target="#socialesModal">
 		</div>
 		<div class="fotoGrid__layout fotoGrid__layout--moda"><img class="fotoGrid__imagen" src="images/moda2_.png"
-				alt="mujer cargando campera al hombro"></div>
+				alt="mujer cargando campera al hombro" data-bs-toggle="modal" data-bs-target="#modaModal"></div>
 		<div class="fotoGrid__layout fotoGrid__layout--productos"><img class="fotoGrid__imagen" src="images/producto2.png"
-				alt="dos manos sosteniendo una hamburguesa"></div>
-		<div><h2 class="fotoGrid__labels">BOOKS</h2></div>
-		<div><h2 class="fotoGrid__labels">SOCIALES</div>
-		<div><h2 class="fotoGrid__labels">MODA</div>
-		<div><h2 class="fotoGrid__labels">PRODUCTO</div>
+				alt="dos manos sosteniendo una hamburguesa" data-bs-toggle="modal" data-bs-target="#productoModal"></div>
+		<div><h2 class="fotoGrid__labels" data-bs-toggle="modal" data-bs-target="#booksModal">BOOKS</h2></div>
+		<div><h2 class="fotoGrid__labels" data-bs-toggle="modal" data-bs-target="#socialesModal">SOCIALES</div>
+		<div><h2 class="fotoGrid__labels" data-bs-toggle="modal" data-bs-target="#modaModal">MODA</div>
+		<div><h2 class="fotoGrid__labels" data-bs-toggle="modal" data-bs-target="#productoModal">PRODUCTO</div>
 	</main>
+
+	<!-- Modal books -->
+	<div class="modal fade" id="booksModal" tabindex="-1" aria-labelledby="booksModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="booksModalLabel">BOOKS</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div id="carouselBooksFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item">
+								<img src="images/books1.png" class="d-block w-100" alt="...">
+							</div>
+							<div class="carousel-item">
+								<img src="images/books3.png" class="d-block w-100" alt="...">
+							</div>
+							<div class="carousel-item">
+								<img src="images/books4.png" class="d-block w-100" alt="...">
+							</div>
+							<div class="carousel-item">
+								<img src="images/books5.png" class="d-block w-100" alt="...">
+							</div>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselBooksFade" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselBooksFade" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="cursor botones borderRadius5 clickEffect" data-bs-dismiss="modal">Cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Fin Modal-->
+
+	<!-- Modal sociales -->
+	<div class="modal fade" id="socialesModal" tabindex="-1" aria-labelledby="socialesModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="socialesModalLabel">SOCIALES</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div id="carouselSocialesFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="images/sociales2_.png" class="d-block w-100" alt="...">
+							</div>
+							<div class="carousel-item">
+								<img src="images/sociales1.png" class="d-block w-100" alt="...">
+							</div>
+							<div class="carousel-item">
+								<img src="images/sociales2.png" class="d-block w-100" alt="...">
+							</div>
+							<div class="carousel-item">
+								<img src="images/sociales3.png" class="d-block w-100" alt="...">
+							</div>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselSocialesFade" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselSocialesFade" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="cursor botones borderRadius5 clickEffect" data-bs-dismiss="modal">Cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Fin Modal-->
+
+	<!-- Modal moda -->
+	<div class="modal fade" id="modaModal" tabindex="-1" aria-labelledby="modaModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modaModalLabel">MODA</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div id="carouselModaFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="images/moda2_.png" class="d-block w-100" alt="...">
+							</div>
+							<div class="carousel-item">
+								<img src="images/moda1.png" class="d-block w-100" alt="...">
+							</div>
+							<div class="carousel-item">
+								<img src="images/moda2.png" class="d-block w-100" alt="...">
+							</div>
+							<div class="carousel-item">
+								<img src="images/moda3.png" class="d-block w-100" alt="...">
+							</div>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselModaFade" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselModaFade" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="cursor botones borderRadius5 clickEffect" data-bs-dismiss="modal">Cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Fin Modal-->
+
+	<!-- Modal producto -->
+	<div class="modal fade" id="productoModal" tabindex="-1" aria-labelledby="productoModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="productoModalLabel">PRODUCTO</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div id="carouselProductoFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="images/producto2.png" class="d-block w-100" alt="...">
+							</div>
+							<div class="carousel-item">
+								<img src="images/producto1.png" class="d-block w-100" alt="...">
+							</div>
+							<div class="carousel-item">
+								<img src="images/producto3.png" class="d-block w-100" alt="...">
+							</div>
+							<div class="carousel-item">
+								<img src="images/producto4.png" class="d-block w-100" alt="...">
+							</div>
+							<div class="carousel-item">
+								<img src="images/producto5.png" class="d-block w-100" alt="...">
+							</div>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselProductoFade" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselProductoFade" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="cursor botones borderRadius5 clickEffect" data-bs-dismiss="modal">Cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Fin Modal-->
 
 	<footer class="footer">
 		<div class= "footer__item">

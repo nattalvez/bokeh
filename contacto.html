@@ -23,7 +23,33 @@
 </head>
 
 <body>
-	<header class="header">
+	<nav class="navbar navbar-light bg-light smallScreenMenu">
+		<div class="container-fluid">
+			<a href="index.html"><img src="images/Bokeh2.png" alt="logo bokeh" class="header__logoHeader"></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  	</button>
+		</div>
+	</nav>
+	<div class="collapse smallScreenMenu" id="navbarToggleExternalContent">
+		<div class="bg-light">
+		  	<header class="header">
+				<nav class="navBar">
+					<ul class="navBar__lista">
+						<li class="navBar__item"><a class="navBar__link" href="index.html">home</a></li>
+						<li class="navBar__item"><a class="navBar__link" href="sobreMi.html">sobre mí</a></li>
+						<li class="navBar__item"><a class="navBar__link" href="fotografia.html">fotografía</a>
+						</li>
+						<li class="navBar__item"><a class="navBar__link" href="marketing.html">márketing</a>
+						</li>
+						<li class="navBar__item"><a class="navBar__link navBar__link--selected" href="contacto.html">contacto</a></li>
+					</ul>
+				</nav>
+			</header>
+		</div>
+	</div>
+
+	<header class="header bigScreensMenu">
 		<a href="index.html"><img src="images/Bokeh2.png" alt="logo bokeh" class="header__logoHeader"></a>
 		<nav class="navBar">
 			<ul class="navBar__lista">
