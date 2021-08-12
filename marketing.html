@@ -21,8 +21,34 @@
 </head>
 
 <body>
-	<header class="header">
-		<a href="index.html"><img src="images/Bokeh2.png" width="350" alt="logo bokeh" class="header__logoHeader"></a>
+		<nav class="navbar navbar-light bg-light smallScreenMenu">
+		<div class="container-fluid">
+			<a href="index.html"><img src="images/Bokeh2.png" alt="logo bokeh" class="header__logoHeader"></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  	</button>
+		</div>
+	</nav>
+	<div class="collapse smallScreenMenu" id="navbarToggleExternalContent">
+		<div class="bg-light">
+		  	<header class="header">
+				<nav class="navBar">
+					<ul class="navBar__lista">
+						<li class="navBar__item"><a class="navBar__link navBar__link--selected" href="index.html">home</a></li>
+						<li class="navBar__item"><a class="navBar__link" href="sobreMi.html">sobre mí</a></li>
+						<li class="navBar__item"><a class="navBar__link" href="fotografia.html">fotografía</a>
+						</li>
+						<li class="navBar__item"><a class="navBar__link" href="marketing.html">márketing</a>
+						</li>
+						<li class="navBar__item"><a class="navBar__link" href="contacto.html">contacto</a></li>
+					</ul>
+				</nav>
+			</header>
+		</div>
+	</div>
+
+	<header class="header bigScreensMenu">
+		<a href="index.html"><img src="images/Bokeh2.png" alt="logo bokeh" class="header__logoHeader"></a>
 		<nav class="navBar">
 			<ul class="navBar__lista">
 				<li class="navBar__item"><a class="navBar__link" href="index.html">home</a></li>
@@ -39,41 +65,41 @@
 
 	<main class="sectionMkt">
 		<div class="mkt">
-			<div class="hidden iconMkt iconMkt--redes"><img src="images/celIcon.png" height=60 alt="imagen de un celular"></div>
-			<div class="hidden iconMkt iconMkt--analytics"><img src="images/graficaIcon.png" height=50 alt="imagen de un monitor con gráficas">
+			<div class="iconMkt iconMkt--redes"><img src="images/celIcon.png" height=60 alt="imagen de un celular"></div>
+			<div class="iconMkt iconMkt--analytics"><img src="images/graficaIcon.png" height=50 alt="imagen de un monitor con gráficas">
 			</div>
-			<div class="hidden iconMkt iconMkt--campaigns"><img src="images/megafonoIcon.png" height=50 alt="imagen de un megáfono"></div>
+			<div class="iconMkt iconMkt--campaigns"><img src="images/megafonoIcon.png" height=50 alt="imagen de un megáfono"></div>
 
 			<div class="mktTitle--redes"><h2 class="mktCenterCell mktBold mktTitle">REDES SOCIALES</h2></div>
 			<div class="mktTitle--analytics"><h2 class="mktCenterCell mktBold mktTitle">ANALÍTICA WEB</h2></div>
 			<div class="mktTitle--campaigns"><h2 class="mktCenterCell mktBold mktTitle">CAMPAÑAS PUBLICITARIAS</h2></div>
 
-			<div class="hidden textMkt textMkt--redes">
+			<div class="textMkt textMkt--redes">
 				¿Necesitás más visibilidad en tus redes sociales, un cambio de imágen corporativa o incrementar ventas?
 				Podemos lograr grandes avances haciendo una modificación en la estrategia y los objetivos, trabajando de la mano de tu comunidad y analizando tu competencia directa. Pequeños cambios hacen la diferencia, sólo hay que saber cuáles nos convienen más.
 			</div>
-			<div class="hidden textMkt textMkt--analytics">
+			<div class="textMkt textMkt--analytics">
 				¿No estás logrando las ventas que deseas? ¿Tu página web no está dando el resultado que esperabas? Revisando tu SEO, la estructura de tu web y el comportamiento de los usuarios que la visitan, podemos generar un aumento considerable en el tráfico de visualizaciones, lo que llevará a generar más ingresos y una comunidad más extensa.
 			</div>
-			<div class="hidden textMkt textMkt--campaigns">
+			<div class="textMkt textMkt--campaigns">
 				El posicionamiento de tu página es tan importante como la existencia de la misma. No es novedad que invertir en publicidad es la mejor práctica para que tu negocio pase a estar en números verdes, pero aquí no basta solo con pagar. Es necesario comprender el funcionamiento de Google y cómo subir en el ranking. Una buena estrategia publicitaria puede cambiar la historia de tu empresa.
 			</div>
-			<div class="hidden mktCenterCell mktTiposTitulo mktTiposTitulo--redes mktBold">TIPOS DE PLANES: </div>
-			<div class="hidden mktCenterCell mktTiposTitulo mktTiposTitulo--analytics mktBold">TIPOS DE PLANES: </div>
-			<div class="hidden mktCenterCell mktTiposTitulo mktTiposTitulo--campaigns mktBold">TIPOS DE PLANES: </div>
-			<div class="hidden tiposPlan--redes">
+			<div class="mktCenterCell mktTiposTitulo mktTiposTitulo--redes mktBold">TIPOS DE PLANES: </div>
+			<div class="mktCenterCell mktTiposTitulo mktTiposTitulo--analytics mktBold">TIPOS DE PLANES: </div>
+			<div class="mktCenterCell mktTiposTitulo mktTiposTitulo--campaigns mktBold">TIPOS DE PLANES: </div>
+			<div class="tiposPlan--redes">
 				<span>UNIPERSONAL</span> |
 				<span>PYME</span> |
 				<span>CORPORATIVO</span>
 			</div>
 
-			<div class="hidden tiposPlan--analytics">
+			<div class="tiposPlan--analytics">
 				<span>UNIPERSONAL</span> |
 				<span>PYME</span> |
 				<span>CORPORATIVO</span>
 			</div>
 
-			<div class="hidden tiposPlan--campaigns">
+			<div class="tiposPlan--campaigns">
 				<span>UNIPERSONAL</span> |
 				<span>PYME</span> |
 				<span>CORPORATIVO</span>
@@ -91,10 +117,13 @@
 			<a class="footer__link" href="mailto:alvez.nathaly@gmail.com">alvez.nathaly@gmail.com</a>
 		</div>
 
-		<fieldset class="footer__item--fieldset footer__item">
+		<form class="footer__item--form">
+			<fieldset class="footer__item--fieldset footer__item">
 			<legend class="footer__legend">SUSCRIBIRME AL MAILING:</legend>
 			<input type="text" class="footer__mailing" id="mailing" placeholder="Escriba su e-mail aquí">
+			<input class="cursor botones borderRadius5 clickEffect" type="button" value="Enviar">
 		</fieldset>
+		</form>
 
 		<div class="footer__social">
 			<a class="footer__socialLink" href="https://www.instagram.com/nattalvezph/"><img src="images/logoIg.png" class="footer__socialIcon"
